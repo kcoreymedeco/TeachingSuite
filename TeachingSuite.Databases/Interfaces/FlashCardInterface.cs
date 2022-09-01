@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace TeachingSuite.Databases.Interfaces
 {
-    public class FlashCardInterface
+    public static class FlashCardInterface
     {
-        public List<DBContexts.FlashCard> GetFlashCards(int Quantity)
+        public static List<DBContexts.FlashCard> GetFlashCards(int Quantity)
         {
             var flashcards = new List<DBContexts.FlashCard>();
             flashcards.Add(new DBContexts.FlashCard() { Id = new Guid(), FrontValue = "Hello", BackValue = "Goodbye" });

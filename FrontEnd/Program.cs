@@ -1,6 +1,6 @@
+using FrontEnd.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using TeachingSuite.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 

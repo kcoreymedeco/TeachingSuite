@@ -1,4 +1,4 @@
-namespace TeachingSuite.FrontEnd.Models
+namespace FrontEnd.Models
 {
     public class ErrorViewModel
     {

@@ -1,17 +1,17 @@
-﻿using Microsoft.EntityFrameworkCore;
-using TeachingSuite.Databases.DBContexts;
+﻿using TeachingSuite.Databases.DBContexts;
 using TeachingSuite.Databases.Interfaces;
 
-namespace TeachingSuite.FrontEnd.Models
+namespace FrontEnd.Models
 {
-    public class Database
+    public class Databases
     {
         public static class FlashCards
         {
             public static List<FlashCard> GetFlashCards(int Quantity)
             {
-                return FlashCards.GetFlashCards(Quantity);
+                return FlashCardInterface.GetFlashCards(Quantity);
             }
+           
         }
     }
 }

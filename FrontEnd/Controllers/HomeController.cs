@@ -1,8 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using FrontEnd.Models;
+using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
-using TeachingSuite.FrontEnd.Models;
 
-namespace TeachingSuite.Controllers
+namespace FrontEnd.Controllers
 {
     public class HomeController : Controller
     {
