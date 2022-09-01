@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
-using TeachingSuite.Models;
+using TeachingSuite.FrontEnd.Models;
 
 namespace TeachingSuite.Controllers
 {
