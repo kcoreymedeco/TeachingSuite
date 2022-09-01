@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TeachingSuite.Databases.DBContexts;
 
 namespace TeachingSuite.Databases.Interfaces
 {
     public static class FlashCardInterface
     {
-        public static List<DBContexts.FlashCard> GetFlashCards(int Quantity)
+        public static List<FlashCard> GetFlashCards(int Quantity)
         {
-            var flashcards = new List<DBContexts.FlashCard>();
-            flashcards.Add(new DBContexts.FlashCard() { Id = new Guid(), FrontValue = "Hello", BackValue = "Goodbye" });
+            var flashcards = FlashcardContext.GetFlashCards(Quantity);
             return flashcards;
         }
 

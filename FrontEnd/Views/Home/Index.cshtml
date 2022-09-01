@@ -1,6 +1,6 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
-    var FlashCards = Databases.FlashCards.GetFlashCards(1);
+    var FlashCards = Databases.FlashCards.GetFlashCards(10);
 }
 
 <style>
@@ -35,6 +35,8 @@
         height: 100%;
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
+        font-size: 30px;
+        padding-top: 50px;
     }
 
     .flip-card-front {
@@ -47,19 +49,80 @@
         color: white;
         transform: rotateY(180deg);
     }
+
+    .visible {
+        display: block;
+    }
+
+    .invisible {
+        display: none;
+    }
 </style>
 
 
-<h1>Card Flip with Text</h1>
 <h3>Hover over the image below:</h3>
+<br />
 
-<div class="flip-card">
-    <div class="flip-card-inner">
-        <div class="flip-card-front">
-            @FlashCards.First().FrontValue
-        </div>
-        <div class="flip-card-back">
-            @FlashCards.First().BackValue
-        </div>
+@{
+    var index = 0;
+    foreach (var card in FlashCards)
+    {
+    <div class="flip-card invisible" id="card-@index">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                @card.FrontValue
+                            </div>
+                            <div class="flip-card-back">
+                                @card.BackValue
+                            </div>
+                        </div>
     </div>
-</div>
+    
+            index++;
+    
+    }
+}
+
+<br/>
+
+<input type="button" class="btn btn-secondary" value="Back" onclick="back()"/>
+<input type="button" class="btn btn-primary" value="Next" onclick="next()"/>
+
+<script>
+    var currentIndex = 0;
+    function makeVisible(index) {
+        var firstCard = document.getElementById("card-" + index);
+        firstCard.classList.remove("invisible");
+        firstCard.classList.add("visible");
+    }
+    function makeInvisible(index) {
+        var firstCard = document.getElementById("card-" + index);
+        firstCard.classList.remove("visible");
+        firstCard.classList.add("invisible");
+    }
+
+    function next(){        
+        try {
+            
+            makeVisible(currentIndex + 1);
+            
+        } catch(ex) {
+            alert("You are at the end of the set");
+            return;
+        }
+        makeInvisible(currentIndex);
+        currentIndex++;
+    }
+
+    function back() {
+        if(currentIndex > 0) {
+            makeInvisible(currentIndex);
+            currentIndex--;
+            makeVisible(currentIndex);
+        } else {
+            alert("You are at the beginning");
+        }
+    }
+
+    makeVisible(0);
+</script>
