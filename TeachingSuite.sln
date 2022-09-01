@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32804.467
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeachingSuite.FrontEnd", "TeachingSuite\TeachingSuite.FrontEnd.csproj", "{891368DE-B908-4B1F-B867-A1D2E68CDD3A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeachingSuite.Databases", "TeachingSuite.Databases\TeachingSuite.Databases.csproj", "{63C58148-7A67-4A1A-99BF-3060A49D6496}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{891368DE-B908-4B1F-B867-A1D2E68CDD3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{891368DE-B908-4B1F-B867-A1D2E68CDD3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{891368DE-B908-4B1F-B867-A1D2E68CDD3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{891368DE-B908-4B1F-B867-A1D2E68CDD3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63C58148-7A67-4A1A-99BF-3060A49D6496}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63C58148-7A67-4A1A-99BF-3060A49D6496}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63C58148-7A67-4A1A-99BF-3060A49D6496}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63C58148-7A67-4A1A-99BF-3060A49D6496}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {958DFDDC-8B08-4FFD-8AB0-52AD74A0A1EF}
+	EndGlobalSection
+EndGlobal
